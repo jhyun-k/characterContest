@@ -72,14 +72,14 @@
             background-color: #fef2c2;
             border: 5px solid #775452;
             border-radius: 50% 60% 50% 60%;
-            top: 0px;
+            top: 40px;
             animation: ear 1s infinite;
         }
         .ear_left{
-            left: -45px;
+            left: -65px;
         }
         .ear_right{
-            right: -45px;
+            right: -65px;
         }
         .ear_shadow{
             position: absolute;
@@ -124,6 +124,21 @@
             background-color: #fff;
             bottom: 20px;
             left: 10px;
+        }
+        .eyebrow{
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            border: 5px solid #775452;
+            border-radius: 100px  100px 0% 0%;
+            border-bottom: none;
+            top: 100px;
+        }
+        .eyebrow_left{
+            left: 130px;
+        }
+        .eyebrow_right{
+            right: 130px;
         }
         .eye{
             position: absolute;
@@ -187,16 +202,6 @@
             border-bottom: none;
             border-right: none;
         }
-        .teeth_top{
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            border: 3px solid #775452;
-            top: -2px;
-            transform: rotate(225deg);
-            border-bottom: none;
-            border-right: none;
-        }
         .teeth_left{
             left: 10px;
         }
@@ -238,6 +243,8 @@
             <div class='pattern pattern_left'></div>
             <div class='pattern pattern_right'></div>
             <div class='pattern_bottom'></div>
+            <div class="eyebrow eyebrow_left"></div>
+            <div class="eyebrow eyebrow_right"></div>
             <div class="eye eye_left">
                 <div class="eyelight"></div>
             </div>
@@ -247,8 +254,6 @@
             <div class="mouth mouth_left"></div>
             <div class="mouth mouth_right"></div>
             <div class="mouth_bottom">
-                <div class="teeth teeth_top teeth_left"></div>
-                <div class="teeth teeth_top teeth_right"></div>
                 <div class="teeth teeth_left"></div>
                 <div class="teeth teeth_right"></div>
             </div>
