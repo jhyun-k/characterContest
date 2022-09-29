@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>monkey</title>
+    <style>
+        /* reset */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            }
+
+        /* animaition */    
+            @keyframes ear {
+                0%{
+                    transform: translate(0,0);
+                }
+                50%{
+                    transform: translate(0,-20px);
+
+                }
+                100%{
+                    transform: translate(0,0);
+                }
+            }
+            @keyframes cheek {
+                0%{
+                    transform: translate(0,0);
+                }
+                50%{
+                    transform: translate(0,-5px);
+
+                }
+                100%{
+                    transform: translate(0,0);
+                }
+            }
+             @keyframes mouth {
+                0%{
+                    height: 30px;                
+                }
+                50%{
+                    bottom: 58px;
+                    height: 70px;
+                }
+                100%{
+                    height: 30px;                    
+                }
+                
+            } 
+        /* css */
+        body{
+            background-color: #c3edac;
+        }
+        .monkey{
+            margin: 150px auto;
+            width: 400px;
+            height: 350px;
+            position: relative;
+        }
+        .ear{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: #fef2c2;
+            border: 5px solid #775452;
+            border-radius: 50% 60% 50% 60%;
+            top: 0px;
+            animation: ear 1s infinite;
+        }
+        .ear_left{
+            left: -45px;
+        }
+        .ear_right{
+            right: -45px;
+        }
+        .ear_shadow{
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            border: 3px solid #775452;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #775452;
+        }
+        .face{
+            position: relative;
+            width: 400px;
+            height: 335px;
+            border: 5px solid #775452;
+            border-radius: 60% 60% 50% 50%;
+            background-color: #fef2c2;
+        }
+        .pattern{
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 3px solid transparent;
+            border-radius: 60% 60% 50% 50%;
+            background-color: white;
+            top: 45px;
+        }
+        .pattern_left{
+            left: 30px;
+        }
+        .pattern_right{
+            right: 30px;
+        }
+        .pattern_bottom{
+            position: absolute;
+            width: 370px;
+            height: 220px;
+            border: 3px solid transparent;
+            border-radius: 60% 60% 50% 50%;
+            background-color: #fff;
+            bottom: 20px;
+            left: 10px;
+        }
+        .eye{
+            position: absolute;
+            width : 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #775452;
+            top: 130px;
+        }
+        .eye_left{
+            left: 130px;
+        }
+        .eye_right{
+            right: 130px;
+        }
+        .eyelight{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            right: 10px;
+            top: 2px;
+        }
+        
+        .mouth{
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            border: 5px solid #775452;
+            bottom: 125px;
+            border-radius: 45%;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+        .mouth_left{
+            left: 150px;
+        }
+        .mouth_right{
+            right: 150px;
+        }
+        .mouth_bottom{
+            position: absolute;
+            width: 80px;
+            height: 30px;
+            border: 5px solid #775452;
+            border-radius: 20px;
+            bottom: 100px;
+            left: 155px;
+            border-top: none;
+            animation: mouth 1s infinite;
+        }
+        .teeth{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 3px solid #775452;
+            bottom: -5px;
+            transform: rotate(45deg);
+            border-bottom: none;
+            border-right: none;
+        }
+        .teeth_top{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 3px solid #775452;
+            top: -2px;
+            transform: rotate(225deg);
+            border-bottom: none;
+            border-right: none;
+        }
+        .teeth_left{
+            left: 10px;
+        }
+        .teeth_right{
+            right: 10px;
+
+        }
+        .cheek{
+            position: absolute;
+            width: 60px;
+            height: 40px;
+            border: 3px solid transparent;
+            border-radius: 50%;
+            background-color: #fb9696;
+            bottom: 125px;
+            animation: cheek 1s infinite;
+        }
+        .cheek_left{
+            left: 90px;
+        }
+        .cheek_right{
+            right: 90px;
+        }
+        .text{
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class='monkey'>
+        <div class="ear ear_left">
+            <div class="ear_shadow"></div>
+        </div>
+        <div class="ear ear_right">
+            <div class="ear_shadow"></div>
+        </div>
+        <div class="face">
+            <div class='pattern pattern_left'></div>
+            <div class='pattern pattern_right'></div>
+            <div class='pattern_bottom'></div>
+            <div class="eye eye_left">
+                <div class="eyelight"></div>
+            </div>
+            <div class="eye eye_right">
+                <div class="eyelight"></div>
+            </div>
+            <div class="mouth mouth_left"></div>
+            <div class="mouth mouth_right"></div>
+            <div class="mouth_bottom">
+                <div class="teeth teeth_top teeth_left"></div>
+                <div class="teeth teeth_top teeth_right"></div>
+                <div class="teeth teeth_left"></div>
+                <div class="teeth teeth_right"></div>
+            </div>
+            <div class='cheek cheek_left'></div>
+            <div class='cheek cheek_right'></div>
+        </div>
+    </div>
+    <h1 class='text'>분명 원숭이인데 왜 이렇게 사자같지..? 역시 나는 뼛속부터 멋쟁이 사자인가봐...</h1>
+<script>
+</script>
+</body>
+</html>
